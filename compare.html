@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" language="javascript">
+var res;
+var res1;
+function myfunction()
+{
+var txt1= document.getElementById("txt1").value;
+var txt2= document.getElementById("txt2").value;
+var charnotfound = false;
+res=txt1.split('');
+res1=txt2.split('');
+
+for(var i=0;i<res.length;i++)
+{
+	if(res1[j] == res[i].value)
+	{
+		for(var j=0;j<res1.length;j++)
+		{
+			alert ("matching character found!!");
+			charnotfound=false;
+			}
+			break;
+	}
+	else
+	{
+		charnotfound=true;
+		break;
+	}
+}
+if(charnotfound)
+{
+	alert ("matching character not found!!");
+}
+}
+</script>
+</head>
+
+<body>
+Enter your string:
+<input type="text" name="txt1" id="txt1"/>
+<br/>
+Find character:
+<input type="text" name="txt2" id="txt2">
+<br/>
+<input type="button" value="submit" onClick="myfunction()">
+</input>
+</body>
+</html>

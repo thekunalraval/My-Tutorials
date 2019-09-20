@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+.title1
+{
+width:1349px;
+border:#000;
+height:30px;
+background:#2291EF;	
+}
+.title2
+{
+width:1349px;	
+border:#000;
+height:50px;
+background:#1787E6;
+}
+.par1
+{
+float:left; color:#FFF;}
+.par2
+{
+float:right; color:#FFF;}
+.line2
+{float:left;font-size:36px;color:#FFF;vertical-align:bottom;text-align:center;}
+.button
+{
+float:right;
+padding-right:10px;
+color:#2291EF;
+
+	}
+
+

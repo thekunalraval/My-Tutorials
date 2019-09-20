@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" language="javascript">
+var myvalue = new Array();
+function searchText()
+{
+	var txt  = document.getElementById("txt1").value;
+	var res  = document.getElementById("txt2").value;
+	
+	var result = confirm("Are you sure you want to enter ?")
+	if(result == true){
+		if(myvalue.length == 0){
+			myvalue[0] = txt;
+		}else{
+			myvalue[myvalue.length] = txt;
+		}
+	}   
+}
+
+function checkPosition()
+{
+	var res  = document.getElementById("txt2").value;
+	var divId = document.getElementById("outputDiv");
+	 for(var i = 0 ;i<=myvalue.length;i++)
+	 {
+		if(myvalue[i].indexOf(res) != -1)
+		{
+			divId.innerHTML = divId.innerHTML + " <br>" + res + " Position :=>"+myvalue[i].indexOf(res)+" in this string "+myvalue[i];
+		} 
+	}
+}
+</script>
+</head>
+
+<body>
+Enter the name:<input type="text" id="txt1"/>
+<br/>
+<input type="button" onClick="searchText()" value="ok"><br>
+check the position of:<input type="text" id="txt2"/>
+<br/>
+<input type="button" onClick="checkPosition()" value="check">
+<div id="outputDiv"></div>
+</body>
+</html>

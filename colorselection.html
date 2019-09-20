@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<body>
+
+<select id="dropdown" onchange="setBg(this)">
+<option value="select item">please select</option>
+  <option value="#33CC33" >Green</option>
+  <option value="#FF0000">Red</option>
+  <option value="#3333FF">Blue</option>
+</select>
+<textarea id="ta">Sample Text</textarea>
+<script>
+function setBg(sel) {
+  document.getElementById('ta').style.background = 
+     sel.options[sel.selectedIndex].value;
+}
+</script>
+
+</body>
+</html>

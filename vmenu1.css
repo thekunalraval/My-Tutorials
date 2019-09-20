@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+.vmenu
+{
+	font:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	list-style-type:none;
+	background-color::#9FF;
+	color:#000;
+	font-size:36px;
+	text-align:left;
+}
+
+.vmenu li{float:left;}
+.vmenu li a{color: #F00}
+.vmenu li a:hover{
+	color:#F00;
+	list-style-type:none;
+	background-color::#9FF;
+}
+
+.submenu.li:hover
+{
+	color:#F00;
+	list-style-type:none;
+	background-color::#9FF;
+}
+
+.clearfix:before,.clearfix:after {display: table;content: "";}
+.clearfix:after{clear: both;}
+	

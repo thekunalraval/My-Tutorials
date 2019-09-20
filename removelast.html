@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" language="javascript">
+var totalControl = 1;
+
+function addDynamicControll()
+{
+var a = document.getElementById("element").value;
+var divID = document.getElementById("controlDiv");
+if(a == "button")
+{
+	var btn = '<input type="button" id=btn_'+totalControl+' value="Button"/>'
+	divID.innerHTML = divID.innerHTML + btn;
+}
+if(a == "radio")
+{
+	var btn ='<input  id=btn_'+totalControl+' type="radio"/>'
+	divID.innerHTML = divID.innerHTML + btn;
+}
+if(a == "textbox")
+{
+	var btn ='<input id=btn_'+totalControl+' type="textbox" />'
+	divID.innerHTML = divID.innerHTML + btn;
+}
+totalControl = totalControl + 1
+} 
+
+function removeControll()
+{
+	//alert("btn_"+totalControl);
+	var last = totalControl-1;
+	document.getElementById("btn_"+last).remove();
+	totalControl = totalControl - 1;
+}
+</script>
+</head>
+
+<body>
+<form>
+  <select name="element" id="element">
+    <option >select value...</option>
+    <option value="button">button</option>
+    <br>
+    <option value="radio">radio</option>
+    <br>
+    <option value="textbox">textbox</option>
+    <br>
+  </select>
+  <input type="button" name="submit" value="submit" onclick="addDynamicControll()"/><br>
+  <input type="button" name="remove" value="remove" onclick="removeControll()"/>
+  <br>
+  <div id="controlDiv"> </div>
+</body>
+</html>

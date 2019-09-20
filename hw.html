@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" language="javascript">
+function heightwidth()
+{
+	var h1=document.getElementById("txt1").value;
+	var w1=document.getElementById("txt2").value;
+	var c1=document.getElementById("divcolor").value;
+	document.getElementById("get").style.height=h1+'px';
+	document.getElementById("get").style.width=w1+'px';
+	document.getElementById("get").style.background=c1;
+}
+</script>
+</head>
+
+<body>
+Enter height:<input type="text" id="txt1"/>
+<br/>
+another width:<input type="text" id="txt2"/>
+<br/>
+enter color:<input type="text" id="divcolor"/>
+<input type="button" onClick="heightwidth()" value="modify">
+<div id="get" style="height:100px; width:100px; border:solid #000 2px;"></div>
+</body>
+</html>

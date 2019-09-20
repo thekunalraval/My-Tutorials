@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body { font-size:62.5%; }
+h1 { font-size: 2.4em; } /* =24px */
+p  { font-size: 1.4em; } /* =14px */
+li { font-size: 1.4em; } /* =14px? */
+</style>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function()
+{
+	$("#button1").click(function()
+	{
+		$("#mytext").css("font-size", function()
+		{
+			return parseInt($(this).css('font-size'))+10+'px';
+		});
+	});
+});
+</script>
+</head>
+
+<body>
+<input type="button" id="button1" value="change-fontsize"/>
+<p id="mytext">hello</p>
+</body>
+</html>

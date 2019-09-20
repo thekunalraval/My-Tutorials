@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" language="javascript">
+function setproperty()
+{
+	var a = document.getElementById("element").value;
+	var apply = document.getElementById("get").value;
+	var t1=document.getElementById("txt1").value;
+	if(a == "height")
+	{
+		document.getElementById("get").style.height=t1+'px';
+	}
+	if(a == "width")
+	{
+		document.getElementById("get").style.width=t1+'px';
+	}
+		
+	if(a == "fontsize")
+	{
+	
+		if(t1 == "xx-small")
+		{
+		document.getElementById("get").style.fontSize=t1;
+		}
+		else if(t1 == "x-small")
+		{
+		document.getElementById("get").style.fontSize=t1;
+		}
+		else if(t1 == "small")
+		{
+		document.getElementById("get").style.fontSize=t1;
+		}
+		else if(t1 == "medium")
+		{
+		document.getElementById("get").style.fontSize=t1;
+		}
+		else if(t1 == "large")
+		{
+		document.getElementById("get").style.fontSize=t1;
+		}
+		else if(t1 == "x-large")
+		{
+		document.getElementById("get").style.fontSize=t1;
+		}
+		else if(t1 == "xx-large")
+		{
+		document.getElementById("get").style.fontSize=t1;
+		}
+		else
+		{
+			document.getElementById("get").style.fontSize=t1+'px';
+		}
+	}
+	if(a == "fontFamily")
+	{
+		document.getElementById("get").style.fontFamily=t1;
+	}
+	if(a == "background")
+	{
+		document.getElementById("get").style.background=t1;
+	}
+}
+</script>
+</head>
+
+<body>
+<select name="element" id="element">
+<option>select value....</option>
+<option value="height">height</option>
+<option value="width">width</option>
+<option value="fontsize">font-size</option>
+<option value="fontFamily">font</option>
+<option value="background">background</option>
+</select><br>
+<input type="text" id="txt1"/><br>
+<input type="button" onClick="setproperty()" value="modify"><br>
+
+<div id="get" style="height:100px; width:200px; border:solid #000 2px;" contenteditable="true">hello this is java script.</div>
+
+</body>
+</html>
